@@ -14,6 +14,89 @@
     scroll-behavior: smooth;
 }
 
+.header__toggle-box {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background: #281710;
+    z-index: 99;
+}
+.header__phone-link {
+    position: absolute;
+    top: 0;
+    right: 30%;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #C08D60;
+}
+.logo__toggle {
+    text-decoration: none;
+    font-size: 2em;
+    font-family: Montserrat Subrayada;
+    color: #fff;
+    width: 100%;
+    display: block;
+    padding-left: 7%;
+    align-items: center;
+    text-align: start;
+}
+#check {
+    display: none;
+}
+#check:checked ~ .check__menu {
+    max-height: 900px;
+}
+.check__label {
+    position: absolute;
+    right: 7%;
+    top: 0;
+    z-index: 12;
+}
+.check__menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    max-height: 0;
+    overflow: hidden;
+    transition: .5s all;
+}
+.check__menu a {
+    display: block;
+    width: 100%;
+    padding: 30px;
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-top: 1px solid #7a583a;
+    background: #281710;
+}
+.header__toggle {
+    position: relative;
+    top: 0;
+    right: 0;
+    background: url(/img/icons/toggle.svg) no-repeat center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.header__close {
+    position: relative;
+    right: 0;
+    top: -100px;
+    background: url(/img/icons/close.svg) no-repeat ;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
 /* __________________HEADER START______________________ */
 
 .wrapper {
@@ -31,13 +114,6 @@
     height: 100%;
     background: #C08D60;
 }
-.header__toggle {
-    background: url(/img/icons/toggle.svg) no-repeat center;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    display: none;
-}
 .header__navbar {
     position: absolute;
     left: 0;
@@ -47,7 +123,6 @@
     align-items: center;
     justify-content: space-between;
     background: #281710;
-    z-index: 12;
 }
 .header__logo {
     font-family: Montserrat Subrayada;
@@ -774,13 +849,12 @@
 .wrapper__box {
     position: relative;
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 .footer__phone {
     position: relative;
-    width: 30%;
-    padding-top: 24px;
+    width: 60%;
+    padding: 24px 0;
 }
 .footer__phone-title {
     color: #C08D60;
@@ -805,6 +879,7 @@
     position: relative;
     width: 30%;
     text-align: end;
+    padding: 24px 0;
 }
 .footer__menu-title {
     font-family: Montserrat Subrayada;
@@ -818,13 +893,6 @@
     color: #C08D60;
     text-decoration: none;
     font-size: 0.8em;
-}
-.footer__social-link {
-    text-decoration: none;
-}
-.social__icon {
-    width: 50px;
-    height: 50px;
 }
 .footer__copyright {
     text-align: center;
@@ -850,11 +918,11 @@
     .unique__card {
         width: 70%;
     }
-    .header__toggle {
-        display: block;
+    .composition__vr-line {
+        font-size: 1.9em;
     }
-    .header__menu {
-        display: none;
+    .footer__phone {
+        width: 60%;
     }
 }
 
@@ -1007,21 +1075,14 @@
     .bonus__form-items {
         font-size: 1.2em;
     }
-    .social__icon {
-        width: 30px;
-        height: 30px;
-    }
     .footer__phone {
         width: 70%;
     }
     .footer__menu-box {
         display: none;
     }
-    .footer__social-icons {
-        text-align: center;
-    }
-}
 
+}
 @media (max-width: 400px)   {
     * {
         font-size: 10px;
